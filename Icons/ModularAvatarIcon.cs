@@ -4,7 +4,6 @@
 //Probably only works if installed via VCC/Package Manager. I don't know what I'm doing.
 
 using System;
-using System.Reflection;
 using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
