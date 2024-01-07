@@ -1,13 +1,10 @@
 //Drop into Enhanced Hierarchy/Editor/Icons Folder
 //By ZenithVal for Enhanced Heirachy 2.0
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Animations;
-
 
 namespace EnhancedHierarchy.Icons {
     public sealed class ParentConstraintIcon : IconBase {

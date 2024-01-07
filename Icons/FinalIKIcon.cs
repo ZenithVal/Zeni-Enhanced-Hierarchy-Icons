@@ -2,8 +2,6 @@
 //By ZenithVal for Enhanced Heirachy 2.0
 //For FinalIK Icons
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
 using UnityEngine;

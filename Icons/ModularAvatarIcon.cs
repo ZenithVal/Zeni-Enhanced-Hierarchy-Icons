@@ -3,12 +3,9 @@
 //For Modular Avatar Icons https://github.com/bdunderscore/modular-avatar
 //Probably only works if installed via VCC/Package Manager. I don't know what I'm doing.
 
-using System;
-using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
 using UnityEngine;
-
 
 namespace EnhancedHierarchy.Icons {
     public sealed class ModularAvatarIcon : IconBase {
