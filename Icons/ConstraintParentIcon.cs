@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Animations;
 
 namespace EnhancedHierarchy.Icons {
-    public sealed class ParentConstraintIcon : IconBase {
+    public sealed class ConstraintParentIcon : IconBase {
 
         private static readonly StringBuilder goComponents = new StringBuilder(500);
         private static readonly GUIContent tempTooltipContent = new GUIContent();

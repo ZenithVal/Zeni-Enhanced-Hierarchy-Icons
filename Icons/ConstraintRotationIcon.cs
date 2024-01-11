@@ -8,7 +8,7 @@ using UnityEngine.Animations;
 
 
 namespace EnhancedHierarchy.Icons {
-    public sealed class RotationConstraintIcon : IconBase {
+    public sealed class ConstraintRotationIcon : IconBase {
 
         private static readonly StringBuilder goComponents = new StringBuilder(500);
         private static readonly GUIContent tempTooltipContent = new GUIContent();
