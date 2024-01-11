@@ -33,22 +33,27 @@ namespace EnhancedHierarchy.Icons {
 
             var components = EnhancedHierarchy.Components;
 
-            for (var i = 0; i < components.Count; i++)
-            {
-                string componentName = components[i].GetType().ToString();
-                if (componentName.Contains("VRCContact"))
+            try {   
+                for (var i = 0; i < components.Count; i++)
                 {
-                    if (componentName.Contains("Receiver")) {
-                        hasContactComponent = true;
-                        hasContactReceiver = true;
-                    }
+                    string componentName = components[i].GetType().ToString();
+                    if (componentName.Contains("VRCContact"))
+                    {
+                        if (componentName.Contains("Receiver")) {
+                            hasContactComponent = true;
+                            hasContactReceiver = true;
+                        }
 
-                    if (componentName.Contains("Sender")) {
-                        hasContactComponent = true;
-                        hasContactSender = true;
+                        if (componentName.Contains("Sender")) {
+                            hasContactComponent = true;
+                            hasContactSender = true;
+                        }
+                        break;
                     }
-                    break;
                 }
+            }
+            catch (System.Exception e) {
+                Debug.Log("Enhanced Hierarchy: Error in VRCContactIcon.cs: " + e);
             }
         }
 

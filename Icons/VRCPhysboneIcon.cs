@@ -35,23 +35,28 @@ namespace EnhancedHierarchy.Icons {
 
             var components = EnhancedHierarchy.Components;
 
-            for (var i = 0; i < components.Count; i++)
-            {
-                string componentName = components[i].GetType().ToString();
-
-                if (componentName.Contains("VRCPhysBone"))
+            try {
+                for (var i = 0; i < components.Count; i++)
                 {
-                    if (componentName.Contains("Collider")) {
-                        hasColliderComponent = true;
-                    }
-                    else {
-                        hasPhysboneComponent = true;
+                    string componentName = components[i].GetType().ToString();
+
+                    if (componentName.Contains("VRCPhysBone"))
+                    {
+                        if (componentName.Contains("Collider")) {
+                            hasColliderComponent = true;
+                        }
+                        else {
+                            hasPhysboneComponent = true;
+                        }
+
+                        HasVRCPhysbone = true;
+                        break;
                     }
 
-                    HasVRCPhysbone = true;
-                    break;
                 }
-
+            }
+            catch (System.Exception e) {
+                Debug.Log("Enhanced Hierarchy: Error in VRCPhysboneIcon.cs: " + e);
             }
         }
 

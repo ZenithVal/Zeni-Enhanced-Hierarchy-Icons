@@ -29,14 +29,20 @@ namespace EnhancedHierarchy.Icons {
 
             var components = EnhancedHierarchy.Components;
 
-            for (var i = 0; i < components.Count; i++)
-            {
-                string componentName = components[i].GetType().ToString();
-                if (componentName.Contains("CCDIK"))
+            try {
+                for (var i = 0; i < components.Count; i++)
                 {
-                    hasFinalIKComponent = true;
-                    break;
+                    string componentName = components[i].GetType().ToString();
+                    //Todo: Add seperate icons for each IK type and rotation limits
+                    if (componentName.Contains("CCDIK" ||"FABRIK" || "GrounderIK" || "AimIK" || "LookAtIK" || "LimbIK" || "RotationLimit"))
+                    {
+                        hasFinalIKComponent = true;
+                        break;
+                    }
                 }
+            }
+            catch (System.Exception e) {
+                Debug.Log("Enhanced Hierarchy: Error in FinalIKIcon.cs: " + e);
             }
         }
 

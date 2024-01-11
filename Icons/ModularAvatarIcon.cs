@@ -29,14 +29,19 @@ namespace EnhancedHierarchy.Icons {
 
             var components = EnhancedHierarchy.Components;
 
-            for (var i = 0; i < components.Count; i++)
-            {
-                string componentName = components[i].GetType().ToString();
-                if (componentName.Contains("ModularAvatar"))
+            try {
+                for (var i = 0; i < components.Count; i++)
                 {
-                    hasModularAvatarComponent = true;
-                    break;
+                    string componentName = components[i].GetType().ToString();
+                    if (componentName.Contains("ModularAvatar"))
+                    {
+                        hasModularAvatarComponent = true;
+                        break;
+                    }
                 }
+            }
+            catch (System.Exception e) {
+                Debug.Log("Enhanced Hierarchy: Error in ModularAvatarIcon.cs: " + e);
             }
         }
 

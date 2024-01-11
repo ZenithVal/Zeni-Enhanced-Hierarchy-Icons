@@ -28,6 +28,7 @@ namespace EnhancedHierarchy.Icons {
 
             var components = EnhancedHierarchy.Components;
 
+        try {
             for (var i = 0; i < components.Count; i++)
             {
                 string componentName = components[i].GetType().ToString();
@@ -39,6 +40,11 @@ namespace EnhancedHierarchy.Icons {
                 }
 
             }
+        }
+        catch (System.Exception e) {
+            Debug.Log("Enhanced Hierarchy: Error in VRCDescriptorIcon.cs: " + e);
+        }
+
         }
 
         public override void DoGUI(Rect rect) {
