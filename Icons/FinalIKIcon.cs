@@ -34,7 +34,13 @@ namespace EnhancedHierarchy.Icons {
                 {
                     string componentName = components[i].GetType().ToString();
                     //Todo: Add seperate icons for each IK type and rotation limits
-                    if (componentName.Contains("CCDIK" ||"FABRIK" || "GrounderIK" || "AimIK" || "LookAtIK" || "LimbIK" || "RotationLimit"))
+                    if (componentName.Contains("CCDIK") || 
+                    componentName.Contains("GrounderIK") || 
+                    componentName.Contains("FABRIK") || 
+                    componentName.Contains("RotationLimit") || 
+                    componentName.Contains("LimbIK") || 
+                    componentName.Contains("LookAtIK") || 
+                    componentName.Contains("AimIK"))
                     {
                         hasFinalIKComponent = true;
                         break;
