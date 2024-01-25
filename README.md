@@ -4,6 +4,8 @@ Lazy additional Icons for [Enhanced Hierarchy 2.0](https://assetstore.unity.com/
 - [Unity Constraints](https://docs.unity3d.com/Manual/Constraints.html)
   - Rotation, Position, Parent, & Aim Constraints
 - [Unity Particles](https://docs.unity3d.com/ScriptReference/ParticleSystem.html)
+- [Unity Audio Sources](https://docs.unity3d.com/ScriptReference/AudioSource.html)
+  - Always enabled, unlike the default EH one which is only on when emitting sound
 - [VRChat](https://vrchat.com/home/worlds)
   - Descriptors, Physbones, & Contacts
 - [Modular Avatar](https://github.com/bdunderscore/modular-avatar)
